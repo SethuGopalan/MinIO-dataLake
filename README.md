@@ -22,20 +22,25 @@ MinIO is executed via an isolated system user with no interactive login shells f
 * **Binary Path:** `/usr/local/bin/minio`
 * **Data Directory:** `/mnt/minio_data` (Owned exclusively by `minio-user:minio-user`)
 * **Configuration Profile:** `/etc/default/minio`
-* **Systemd Service Definition:** `/etc/systemd/system/minio.service`
-# JAVA
+* **Systemd Service Definition:** `/etc/systemd/system/minio.service'
+
+
+## Phase 2: Compute Layer Configuration (PySpark)
+
+### 1. Java Installation
+```bash
 # Install the exact Java 21 backend required by Spark on Fedora
 sudo dnf install java-21-openjdk-devel -y
 
-#Python 
-
+2. Python Virtual Environment Setup
+'''bash
 # Install the core Python virtual environment package if missing
 sudo dnf install python3-venv -y
 
 # Create the clean environment wrapper
 python3 -m venv pyspark_env
 
-# Activate it
+# Hot-reload and activate it
 source pyspark_env/bin/activate
 
 # Upgrade the package manager and install the engine components
