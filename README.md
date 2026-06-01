@@ -23,6 +23,24 @@ MinIO is executed via an isolated system user with no interactive login shells f
 * **Data Directory:** `/mnt/minio_data` (Owned exclusively by `minio-user:minio-user`)
 * **Configuration Profile:** `/etc/default/minio`
 * **Systemd Service Definition:** `/etc/systemd/system/minio.service`
+# JAVA
+# Install the exact Java 21 backend required by Spark on Fedora
+sudo dnf install java-21-openjdk-devel -y
+
+#Python 
+
+# Install the core Python virtual environment package if missing
+sudo dnf install python3-venv -y
+
+# Create the clean environment wrapper
+python3 -m venv pyspark_env
+
+# Activate it
+source pyspark_env/bin/activate
+
+# Upgrade the package manager and install the engine components
+pip install --upgrade pip
+pip install pyspark jupyterlab
 
 ### 2. Core Linux Service Commands
 Use these standard systemd utilities to manage the object storage daemon:
