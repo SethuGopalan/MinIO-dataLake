@@ -43,14 +43,16 @@ python3 -m venv pyspark_env
 # Hot-reload and activate it
 source pyspark_env/bin/activate
 
-# Upgrade the package manager and install the engine components
-pip install --upgrade pip
-pip install pyspark jupyterlab
 
 ### 2. Core Linux Service Commands
 Use these standard systemd utilities to manage the object storage daemon:
 
 ```bash
+# Upgrade the package manager and install the engine components
+pip install --upgrade pip
+pip install pyspark jupyterlab
+
+
 # Check service health and runtime logs
 sudo systemctl status minio
 
