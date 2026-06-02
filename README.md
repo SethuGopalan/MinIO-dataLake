@@ -31,6 +31,7 @@ MinIO is executed via an isolated system user with no interactive login shells f
 ```bash
 # Install the exact Java 21 backend required by Spark on Fedora
 sudo dnf install java-21-openjdk-devel -y
+-----
 
 ### 2. Python Virtual Environment Setup
 '''bash
