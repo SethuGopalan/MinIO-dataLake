@@ -27,12 +27,12 @@ MinIO is executed via an isolated system user with no interactive login shells f
 
 ## Phase 2: Compute Layer Configuration (PySpark)
 
-### 1. Java Installation
+# 1. Java Installation
 ```bash
 # Install the exact Java 21 backend required by Spark on Fedora
 sudo dnf install java-21-openjdk-devel -y
 
-2. Python Virtual Environment Setup
+## 2. Python Virtual Environment Setup
 '''bash
 # Install the core Python virtual environment package if missing
 sudo dnf install python3-venv -y
@@ -44,7 +44,7 @@ python3 -m venv pyspark_env
 source pyspark_env/bin/activate
 
 
-### 2. Core Linux Service Commands
+## 2. Core Linux Service Commands
 Use these standard systemd utilities to manage the object storage daemon:
 
 ```bash
