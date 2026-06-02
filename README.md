@@ -2,7 +2,7 @@
 # Local Enterprise Data Lake Architecture (Fedora Linux)
 
 This repository tracks the configuration, deployment, and testing pipelines for a production-grade local data lake. The architecture decouples storage and compute by running a bare-metal distributed object storage layer managed by systemd, alongside an isolated Python virtual environment executing PySpark pipelines.
-
+![MinIO Console Object Browser](mini-io-lake.jpg)
 ---
 
 ## Architecture Overview
